@@ -1,0 +1,156 @@
+/* Container and form spacing */
+form {
+  max-width: 520px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 36px 32px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(40, 67, 138, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form vertical spacing */
+.space-y-6 > * + * {
+  margin-top: 24px;
+}
+
+/* Labels style */
+.form-label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #1257a6;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+
+/* Input, select, and textarea fields */
+.form-input,
+.form-select,
+.form-textarea {
+  padding: 12px 14px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1.5px solid #cbd5e1;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.25s ease;
+  background-color: #f8fafc;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Focus states */
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 6px rgba(59,130,246, 0.4);
+}
+
+/* Textarea specific fix */
+.form-textarea {
+  min-height: 90px;
+}
+
+/* Button styles */
+.btn {
+  cursor: pointer;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding: 14px 0;
+  user-select: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.5);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #1e40af;
+  box-shadow: 0 8px 16px rgba(30, 64, 175, 0.6);
+}
+
+.btn-primary:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background-color: #6366f1;
+  color: white;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.5);
+  width: auto;
+  padding: 10px 24px;
+}
+
+.btn-secondary:hover {
+  background-color: #4338ca;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  border: 3px solid #d1d5db;
+  border-top: 3px solid white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error message style */
+.error-message {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Success message style */
+.success-message {
+  background-color: #dcfce7;
+  color: #15803d;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.success-message:hover {
+  text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  form {
+    padding: 24px 20px;
+    margin: 30px auto;
+  }
+  
+  .form-label {
+    font-size: 1rem;
+  }
+  
+  .btn-primary {
+    font-size: 1.1rem;
+  }
+}

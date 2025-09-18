@@ -4,6 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Suppress ResizeObserver errors due to browser ResizeObserver loop warnings
+const resizeObserverLoopErr = /ResizeObserver loop completed with undelivered notifications/;
+
+const originalError = console.error;
+console.error = (...args) => {
+  if (args.length > 0 && typeof args[0] === 'string' && resizeObserverLoopErr.test(args[0])) {
+    return; // Ignore this specific error message
+  }
+  originalError(...args);
+};
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

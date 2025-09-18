@@ -1,0 +1,175 @@
+/* Container */
+.achievements-container {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Headings */
+.achievements-container h2,
+.achievements-container h3 {
+  color: #1c2b4a;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Wrapper around the form inputs and button */
+.achievement-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
+  gap: 18px; /* spacing between inputs */
+  width: 100%;
+  max-width: 400px; /* limit max width */
+  margin: 0 auto; /* center wrapper inside container */
+}
+
+/* Inputs and File Input */
+.achievement-input,
+.achievement-file-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #ccd6e0;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.achievement-input:focus,
+.achievement-file-input:focus {
+  outline: none;
+  border-color: #3f72af;
+  box-shadow: 0 0 8px rgba(63, 114, 175, 0.25);
+}
+
+/* Upload Button */
+.achievement-upload-btn {
+  width: 180px; /* fixed width for consistent look */
+  padding: 12px 26px;
+  background-color: #3f72af;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(63, 114, 175, 0.3);
+  align-self: center; /* center inside flex */
+  display: block;
+  margin: 0 auto;
+}
+
+.achievement-upload-btn:hover:not(:disabled) {
+  background-color: #2b5b8f;
+  transform: translateY(-1px);
+}
+
+.achievement-upload-btn:disabled {
+  background-color: #94a9c9;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Uploaded Achievements Title */
+.uploaded-title {
+  margin-top: 50px;
+  font-size: 1.6rem;
+  color: #1c2b4a;
+  border-bottom: 2px solid #3f72af;
+  padding-bottom: 10px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Achievements List */
+.achievements-list {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual Achievement Card */
+.achievement-item {
+  background: #f3f7fb;
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.achievement-item:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Title */
+.achievement-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #24365f;
+  margin-bottom: 6px;
+}
+
+/* Student and Date */
+.achievement-student-date {
+  font-size: 0.95rem;
+  color: #657194;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+/* Description */
+.achievement-description {
+  font-size: 1rem;
+  color: #444f63;
+  margin-bottom: 12px;
+}
+
+/* File Link */
+.achievement-file-link {
+  display: inline-block;
+  font-weight: 600;
+  color: #2b63aa;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.achievement-file-link:hover {
+  border-bottom: 1px solid #2b63aa;
+}
+
+/* Delete Button */
+.achievement-delete-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: #ff5e5e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(255, 94, 94, 0.35);
+}
+
+.achievement-delete-btn:hover {
+  background-color: #d33636;
+}
+.achievement-delete-btn:active {
+  box-shadow: 0 1px 4px rgba(211, 54, 54, 0.5);
+  transform: translateY(1px);
+} 

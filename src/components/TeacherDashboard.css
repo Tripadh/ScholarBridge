@@ -1,0 +1,182 @@
+.teacher-dashboard-container {
+  background: #fff;
+  padding: 36px 32px 32px 32px;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(22, 66, 130, 0.11);
+  margin: 46px auto 0 auto;
+  max-width: 900px;
+  min-width: 320px;
+  width: 90%;
+}
+
+.teacher-dashboard-container h1 {
+  color: #164282;
+  margin-bottom: 0.35em;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.teacher-dashboard-container p {
+  color: #556;
+  font-size: 1.1em;
+  margin-bottom: 18px;
+}
+
+.teacher-dashboard-container h2, .all-certs-label {
+  color: #2563eb;
+  margin: 20px 0 12px;
+  font-size: 1.16em;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  border-bottom: 2px solid #e2eafd;
+  padding-bottom: 2px;
+}
+
+.certificate-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #f9fafe;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(22, 44, 80, 0.06);
+}
+
+.certificate-table th, .certificate-table td {
+  padding: 14px 12px;
+  border-bottom: 1.5px solid #e2eafd;
+  font-size: 1.02em;
+  transition: background 0.18s;
+}
+
+.certificate-table th {
+  background: #e5eeff;
+  color: #263266;
+  font-weight: 700;
+  font-size: 1.05em;
+  border: none;
+}
+
+.certificate-table tr:last-child td {
+  border-bottom: none;
+}
+
+.certificate-table tr:hover td {
+  background: #f1f6fd;
+}
+
+.certificate-table a {
+  color: #1a52b0;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.14s;
+}
+
+.certificate-table a:hover {
+  color: #0a26b4;
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .teacher-dashboard-container {
+    padding: 16px 3vw;
+    max-width: 99vw;
+  }
+  .certificate-table th, .certificate-table td {
+    font-size: 0.95em;
+    padding: 8px 6px;
+  }
+}
+.view-certificate-link {
+  color: #3b82f6; /* Softer blue */
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  padding-bottom: 1px;
+  font-size: 0.95em;
+  transition: border-color 0.25s ease, color 0.25s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.view-certificate-link:hover,
+.view-certificate-link:focus {
+  color: #1e40af; /* Darker blue on hover */
+  border-color: #93c5fd; /* subtle underline on hover */
+  outline: none;
+}
+
+/* Optional: small elegant arrow icon after text */
+.view-certificate-link::after {
+  content: '→';
+  font-size: 1em;
+  margin-left: 6px;
+  color: #60a5fa;
+  transition: color 0.25s ease;
+}
+
+.view-certificate-link:hover::after,
+.view-certificate-link:focus::after {
+  color: #1e40af;
+}
+.search-bar {
+  width: 300px;
+  padding: 10px 16px;
+  border: 1.5px solid #3b82f6;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fafcff;
+  color: #222d3b;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(75, 96, 220, 0.04);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-bar:focus {
+  border-color: #2563eb;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.10);
+  outline: none;
+}
+.search-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  background: #f5f8ff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px 0 rgba(37,99,235,0.07);
+  max-width: 340px;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 6px;
+}
+
+/* Search bar input styles, extend from previous version */
+.search-bar {
+  flex: 1;
+  width: 220px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fafcff;
+  border: 1.5px solid #3b82f6;
+  color: #222d3b;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.search-bar:focus {
+  border-color: #2563eb;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.10);
+}
+
+/* Optional: Add hover for the surrounding box */
+.search-bar-wrapper:hover, .search-bar-wrapper:focus-within {
+  box-shadow: 0 6px 24px 0 rgba(37,99,235,0.13);
+  border: 1.5px solid #2563eb;
+}

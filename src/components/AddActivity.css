@@ -1,0 +1,315 @@
+.add-activity-form {
+  background: #fff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  box-sizing: border-box;
+}
+
+.add-activity-form h3 {
+  margin-bottom: 20px;
+  color: #222;
+  text-align: center;
+}
+
+.add-activity-form label {
+  display: block;
+  margin-bottom: 16px;
+  color: #444;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.add-activity-form select,
+.add-activity-form input[type="text"],
+.add-activity-form input[type="date"],
+.add-activity-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.add-activity-form select:focus,
+.add-activity-form input[type="text"]:focus,
+.add-activity-form input[type="date"]:focus,
+.add-activity-form textarea:focus {
+  border-color: #3182ce;
+  outline: none;
+}
+
+.add-activity-form button {
+  background-color: #3182ce;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 3px 8px rgba(49,130,206,0.4);
+  transition: background-color 0.3s ease;
+}
+
+.add-activity-form button:disabled {
+  background-color: #a3cdfd;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.add-activity-form button:hover:not(:disabled) {
+  background-color: #285eaa;
+}
+.error-message {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.success-message {
+  background-color: #dcfce7;
+  color: #15803d;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+label small {
+  display: block;
+  color: #777;
+  margin-top: 4px;
+  font-weight: 400;
+}
+.add-activity-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 32px rgba(49,130,206,0.09), 0 1.5px 8px rgba(44,62,80,0.13);
+  padding: 36px 34px 34px 34px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 460px;
+  width: 100%;
+}
+
+.add-activity-title {
+  text-align: center;
+  font-size: 1.42em;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #1a2548;
+  letter-spacing: 0.1px;
+}
+
+.add-activity-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.08em;
+  color: #195497;
+  margin-top: 18px;
+  font-weight: 500;
+}
+
+.add-activity-form input,
+.add-activity-form textarea,
+.add-activity-form select {
+  width: 100%;
+  padding: 13px 12px;
+  margin-bottom: 7px;
+  border-radius: 8px;
+  border: 1px solid #d2dbec;
+  background: #f5f8fd;
+  font-size: 1em;
+  outline: none;
+  transition: border 0.13s;
+}
+
+.add-activity-form input:focus,
+.add-activity-form textarea:focus,
+.add-activity-form select:focus {
+  border-color: #3182ce;
+}
+
+.add-activity-form textarea {
+  min-height: 55px;
+  resize: vertical;
+}
+
+.add-activity-save-btn {
+  padding: 13px 0;
+  width: 100%;
+  background: #3182ce;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.15em;
+  font-weight: 600;
+  margin-top: 22px;
+  cursor: pointer;
+  box-shadow: 0 1.5px 8px rgba(49,130,206,0.07);
+  transition: background 0.17s;
+}
+
+.add-activity-save-btn:hover {
+  background: #205292;
+}
+.add-activity-save-btn:disabled {
+  background: #a3cdfd;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.add-activity-form {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 32px rgba(49, 130, 206, 0.09), 0 1.5px 8px rgba(44, 62, 80, 0.13);
+  padding: 35px 35px 25px 35px;
+  max-width: 500px;
+  margin: 0 auto 40px auto; /* center your form */
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.add-activity-form h3 {
+  font-size: 1.38em;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #1a2548;
+  text-align: center;
+}
+
+.add-activity-form label {
+  margin-bottom: 14px;
+  font-weight: 600;
+  color: #195497;
+  font-size: 1.04em;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-activity-form input[type="text"],
+.add-activity-form input[type="date"],
+.add-activity-form select,
+.add-activity-form textarea {
+  background: #f5f8fd;
+  border-radius: 8px;
+  border: 1px solid #d2dbec;
+  padding: 13px 15px;
+  font-size: 1em;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin-top: 6px;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.add-activity-form input:focus,
+.add-activity-form textarea:focus,
+.add-activity-form select:focus {
+  border-color: #3182ce;
+}
+
+.add-activity-form small {
+  margin-top: 2px;
+  color: #666;
+  font-weight: 400;
+  font-size: 0.87em;
+}
+
+.add-activity-form button {
+  background: #3182ce;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05em;
+  padding: 13px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 1.6px 8px rgba(49, 130, 206, 0.07);
+  margin-top: 24px;
+  transition: background-color 0.2s;
+}
+
+.add-activity-form button:disabled {
+  background: #aac7f9;
+  cursor: not-allowed;
+}
+
+.add-activity-form button:hover:not(:disabled) {
+  background: #205292;
+}
+
+.error-message {
+  color: #cc0000;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.success-message {
+  color: #2d7b2d;
+  font-weight: 600;
+  margin-bottom: 15px;
+  cursor: pointer;
+  text-align: center;
+}
+.success-message:hover {
+  text-decoration: underline;
+}
+.activity-form-container {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 28px rgba(49,130,206,0.12);
+  padding: 36px 34px;
+  max-width: 440px;
+  margin: 48px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid #f1f6fb;
+}
+
+.activity-form-heading {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #205292;
+  letter-spacing: 0.03em;
+  margin-bottom: 38px;
+  text-align: center;
+  position: relative;
+}
+
+.activity-form-heading::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 4px;
+  background: linear-gradient(90deg, #3182ce 45%, #63b3ed 100%);
+  border-radius: 2px;
+  margin: 14px auto 0 auto;
+}
+.activity-form-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #34495e;
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+} 

@@ -1,0 +1,196 @@
+.certificate-page {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 24px 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000000;
+}
+
+.certificate-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #2a4365;
+}
+
+.certificate-upload-box {
+  background: #f7fafc;
+  box-shadow: 0 4px 14px rgba(66, 102, 209, 0.1);
+  border-radius: 16px;
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 36px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: box-shadow 0.3s ease;
+}
+
+.certificate-upload-box h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 22px;
+  color: #2d3748;
+}
+
+.certificate-upload-box input[type="file"] {
+  width: 100%;
+  max-width: 360px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  color: #4a5568;
+  border-radius: 8px;
+  border: 1px solid #cbd5e0;
+  cursor: pointer;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.certificate-upload-box input[type="file"]::file-selector-button {
+  margin-right: 18px;
+  border: none;
+  background: #3182ce;
+  padding: 9px 22px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.certificate-upload-box input[type="file"]::file-selector-button:hover {
+  background: #234a72;
+}
+
+.certificate-upload-box button {
+  background-color: #3182ce;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+  width: 150px;
+  align-self: center;
+}
+
+.certificate-upload-box button:hover {
+  background-color: #2c5282;
+}
+
+.loading-text,
+.empty-text {
+  font-size: 1.15rem;
+  color: #718096;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.certificate-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.certificate-item {
+  background-color: #e4e8f7;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  padding: 18px 24px;
+  color: #2a4365;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(66, 102, 209, 0.1);
+  transition: background-color 0.3s;
+}
+
+.certificate-item:hover {
+  background-color: #d6dbf8;
+}
+
+.certificate-link {
+  text-decoration: none;
+  color: #3182ce;
+  font-weight: 600;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+.certificate-link:hover {
+  color: #2c5282;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .certificate-page {
+    margin: 24px 12px;
+  }
+
+  .certificate-upload-box {
+    padding: 24px 16px;
+    max-width: 100%;
+  }
+
+  .certificate-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px;
+  }
+
+  .certificate-link {
+    margin: 12px 0 0;
+  }
+}
+.certificate-btn {
+  background-color: #1976d2;    /* Same blue as View */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 18px;
+  margin-left: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 7px rgba(25, 118, 210, 0.08);
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+}
+
+.certificate-btn:hover,
+.certificate-btn:focus {
+  background-color: #155a99;
+}
+.certificate-btn {
+  background-color: #1976d2;    /* Blue background */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 18px;
+  margin-left: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 7px rgba(25, 118, 210, 0.08);
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+}
+
+.certificate-btn:hover,
+.certificate-btn:focus {
+  background-color: #155a99;
+}
+  

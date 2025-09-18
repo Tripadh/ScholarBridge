@@ -1,0 +1,743 @@
+.my-activities-section {
+  max-width: 700px;
+  margin: 0 auto;
+  background: transparent;
+  padding-top: 18px;
+}
+
+.my-activities-title {
+  font-size: 1.42em;
+  font-weight: bold;
+  color: #1a2548;
+  margin-bottom: 12px;
+}
+
+.activities-count {
+  color: #195497;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.my-activities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.my-activity-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1.5px 8px rgba(49,130,206,0.04), 0 0.5px 3px rgba(44,62,80,0.05);
+  padding: 22px 22px 15px 22px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-activity-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.my-activity-title {
+  font-weight: 600;
+  font-size: 1.13em;
+  color: #195497;
+}
+
+.my-activity-type {
+  background: #e5ecfa;
+  color: #3182ce;
+  border-radius: 7px;
+  font-size: 0.99em;
+  font-weight: 500;
+  padding: 4px 10px;
+  margin-left: 8px;
+  letter-spacing: 0.01em;
+}
+
+.my-activity-date {
+  color: #888;
+  font-size: 0.96em;
+  margin: 5px 0 7px 0;
+}
+
+.my-activity-desc {
+  color: #094e77;
+  font-size: 1em;
+  margin-bottom: 7px;
+  margin-top: 2px;
+}
+
+.my-activities-empty {
+  color: #6a6e81;
+  text-align: left;
+  font-size: 1.13em;
+  margin-top: 32px;
+  font-weight: 400;
+}
+.success-message {
+  color: #28a745;
+  font-size: 1.05em;
+  margin-top: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}       
+
+.success-message:hover {
+  text-decoration: underline;
+}
+.success-message {
+  background-color: #dcfce7;
+  color: #15803d;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border-radius: 6px; 
+  cursor: pointer;
+    text-align: center;
+}
+.success-message:hover {    
+  text-decoration: underline;
+}   
+/* Toast notifications */
+.toast {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  z-index: 10000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  opacity: 0.95;
+  animation: slide-in 0.3s ease forwards;
+}
+
+.toast-success {
+  background-color: #28a745;
+}
+
+.toast-error {
+  background-color: #dc3545;
+}
+
+/* Simple slide-in */
+@keyframes slide-in {
+  from {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 0.95;
+  }
+}
+
+/* Cards */
+.my-activities-card {
+  padding: 18px 22px;
+}
+
+.card-header h2 {
+  font-size: 1.5em;
+  margin-bottom: 0;
+  color: #133467;
+}
+
+.card-header p {
+  font-weight: 600;
+  color: #195497;
+  margin: 6px 0 20px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 14px 8px;
+  border-bottom: 1px solid #e1e8f4;
+  animation: fadeIn 0.3s ease forwards;
+  gap: 14px;
+}
+
+.activity-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  user-select: none;
+}
+
+.activity-academic {
+  background: linear-gradient(135deg, #3182ce 0%, #63b3ed 100%);
+  color: white;
+}
+
+.activity-cocurricular {
+  background: linear-gradient(135deg, #28a745 0%, #68d391 100%);
+  color: white;
+}
+
+.activity-info {
+  flex: 1;
+}
+
+.activity-info h3 {
+  margin: 0 0 4px 0;
+  color: #195497;
+  font-weight: 600;
+}
+
+.activity-meta {
+  display: flex;
+  gap: 12px;
+  color: #555;
+  font-size: 0.88em;
+  margin-bottom: 6px;
+}
+
+.activity-description {
+  margin: 0;
+  font-size: 0.95em;
+  color: #444;
+}
+
+.activity-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+.action-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.action-btn:hover {
+  color: #3182ce;
+}
+
+.edit-btn {
+  color: #3182ce;
+}
+
+.delete-btn {
+  color: #dc3545;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+ 
+.activity-edit-form {
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #d2d6dc;
+  padding: 24px 22px;
+  margin-top: 12px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+}
+
+.activity-edit-form h4 {
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #1a2548;
+  font-size: 1.18em;
+}
+
+.activity-edit-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #254078;
+  margin-bottom: 14px;
+  font-size: 1em;
+}
+
+.activity-edit-form input,
+.activity-edit-form select,
+.activity-edit-form textarea {
+  border-radius: 8px;
+  border: 1px solid #bec9e0;
+  background: white;
+  padding: 12px 14px;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin-top: 6px;
+  transition: border-color 0.2s;
+  outline: none;
+  resize: vertical;
+}
+
+.activity-edit-form input:focus,
+.activity-edit-form select:focus,
+.activity-edit-form textarea:focus {
+  border-color: #3182ce;
+}
+
+.activity-edit-form textarea {
+  min-height: 55px;
+}
+
+.activity-edit-form .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.activity-edit-form .btn {
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.15s ease;
+  border: none;
+  color: white;
+}
+
+.activity-edit-form .btn.save-btn {
+  background-color: #3182ce;
+}
+
+.activity-edit-form .btn.save-btn:hover {
+  background-color: #1e40af;
+}
+
+.activity-edit-form .btn.cancel-btn {
+  background-color: #cbd5e1;
+  color: #374151;
+}
+
+.activity-edit-form .btn.cancel-btn:hover {
+  background-color: #94a3b8;
+}
+.activity-edit-form .btn:disabled {
+  background-color: #a3cdfd;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+/* My Activities Section */
+.my-activities-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2.5px 14px rgba(49,130,206,0.08), 0 1.5px 8px rgba(44,62,80,0.10);
+  padding: 30px 30px 18px 30px;
+  max-width: 600px;
+  margin: 26px auto 32px auto;
+}
+
+.card-header h2 {
+  font-size: 1.34em;
+  font-weight: bold;
+  color: #1a2548;
+  margin-bottom: 0;
+}
+
+.card-header p {
+  color: #3182ce;
+  font-weight: 500;
+  font-size: 1em;
+  margin: 8px 0 18px;
+}
+
+.card-body {
+  margin-top: 14px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #f5f8fe;
+  border-radius: 9px;
+  padding: 18px 18px 12px 18px;
+  margin-bottom: 14px;
+  transition: box-shadow 0.16s, background 0.18s;
+  box-shadow: 0 1px 4px rgba(49,130,206,0.05);
+  border: 1px solid #eaeceb;
+}
+
+.activity-item:hover {
+  background: #e8f1fb;
+  box-shadow: 0 4px 16px rgba(49,130,206,0.11);
+  border-color: #b2cdf8;
+}
+
+.activity-icon {
+  min-width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3182ce 0%, #63b3ed 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.65em;
+  margin-top: 2px;
+  box-shadow: 0 0.5px 3px rgba(49,130,206,0.09);
+}
+
+.activity-cocurricular {
+  background: linear-gradient(135deg, #28a745 0%, #68d391 100%);
+}
+
+.activity-info {
+  flex: 1;
+}
+
+.activity-info h3 {
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #205292;
+  margin-bottom: 3px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.activity-meta {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.97em;
+  color: #196db3;
+  margin-bottom: 3px;
+}
+
+.activity-type {
+  background: #e5ecfa;
+  color: #3182ce;
+  font-weight: 500;
+  border-radius: 7px;
+  padding: 4px 12px;
+  font-size: 0.96em;
+  margin-right: 2px;
+}
+
+.activity-date {
+  color: #6c7899;
+}
+
+.activity-description {
+  color: #494d5f;
+  background: #f6fafc;
+  border-radius: 7px;
+  padding: 7px 10px;
+  font-size: 0.98em;
+  margin-top: 4px;
+}
+
+.activity-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  margin-left: 6px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.35em;
+  padding: 7px;
+  margin: 0;
+  color: #afbbdd;
+  cursor: pointer;
+  transition: background 0.13s, color 0.15s, box-shadow 0.12s;
+}
+
+.action-btn.edit-btn:hover {
+  color: #3182ce;
+  background: #e5ecfa;
+  box-shadow: 0 4px 12px rgba(49,130,206,0.10);
+}
+
+.action-btn.delete-btn:hover {
+  color: #dc3545;
+  background: #fce8e8;
+  box-shadow: 0 4px 12px rgba(220,53,69,0.13);
+}
+
+@media (max-width: 600px) {
+  .my-activities-card {
+    padding: 10px 2vw;
+  }
+  .activity-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 12px 8px;
+  }
+  .activity-actions {
+    margin-top: 6px;
+    margin-left: 0;
+  }
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 4px solid #b3c8ec;
+  border-top: 4px solid #3182ce;
+  border-radius: 50%;
+  margin: 30px auto 18px auto;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { 100% { transform: rotate(360deg); } }
+ @keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.activity-item {
+  /* existing styles */
+  animation: fadeSlideUp 0.4s ease forwards;
+  animation-delay: var(--animation-delay, 0ms);
+}
+
+.activity-type {
+  background: linear-gradient(135deg, #e3efff 0%, #c4ddfc 100%);
+  color: #1c4db7;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 5px 14px;
+  font-size: 0.93em;
+  box-shadow:
+    0 2px 5px rgba(28, 77, 183, 0.25),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.6);
+  margin-right: 6px;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  user-select: none;
+  transition: box-shadow 0.25s ease;
+}
+
+.activity-type:hover {
+  box-shadow:
+    0 4px 12px rgba(28, 77, 183, 0.4),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.7);
+}
+.activity-type.cocurricular {
+  background: linear-gradient(135deg, #d7f3df 0%, #a9ddbe 100%);
+  color: #319546;
+  box-shadow:
+    0 2px 5px rgba(49, 149, 70, 0.25),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.6);
+}
+
+.activity-type.cocurricular:hover {
+  box-shadow:
+    0 4px 12px rgba(49, 149, 70, 0.4),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.7);
+}
+.action-btn {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.action-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 6px rgba(0,0,0,0.08);
+}
+
+.my-activities-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(49,130,206,0.07), 0 2.5px 10px rgba(49,62,80,0.07);
+  padding: 32px 34px 26px 34px;
+  max-width: 640px;
+  margin: 32px auto 0 auto;
+  border: 1px solid #e7ecf4;
+}
+
+.card-header h2 {
+  font-size: 1.23em;
+  font-weight: 700;
+  color: #193868;
+  margin-bottom: 0;
+}
+
+.card-header p {
+  color: #3675c5;
+  font-weight: 600;
+  font-size: 1em;
+  margin: 8px 0 20px;
+}
+
+.card-body {
+  margin-top: 10px;
+}
+
+/* Activity Card */
+.activity-item {
+  display: flex;
+  gap: 16px;
+  background: #f4f8ff;
+  border-radius: 13px;
+  padding: 17px 18px 10px 18px;
+  margin-bottom: 16px;
+  border: 1.5px solid #e5eefa;
+  transition: box-shadow 0.18s, border 0.17s, transform 0.18s, background 0.18s;
+  animation: fadeSlideUp 0.43s cubic-bezier(.35,1.15,.44,1) forwards;
+  animation-delay: var(--animation-delay, 0ms);
+}
+
+.activity-item:hover {
+  background: #e4edfa;
+  box-shadow: 0 4px 24px rgba(49,130,206,0.11);
+  border-color: #b6ccf2;
+  transform: translateY(-3px) scale(1.017);
+}
+
+.activity-icon {
+  min-width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #3182ce 0%, #63b3ed 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2em;
+  margin-right: 0;
+  margin-top: 2px;
+  box-shadow: 0 0.5px 4px rgba(49,130,206,0.10);
+}
+
+.activity-cocurricular {
+  background: linear-gradient(135deg, #23b17d, #68d391);
+}
+
+.activity-info h3 {
+  font-size: 1.11em;
+  font-weight: 600;
+  color: #204689;
+  margin-bottom: 4px;
+  line-height: 1.22em;
+}
+
+.activity-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1em;
+  color: #196db3;
+  margin-bottom: 3px;
+}
+
+.activity-type {
+  background: linear-gradient(120deg, #e5ecfa, #c3defe);
+  color: #215db0;
+  font-weight: 600;
+  border-radius: 9px;
+  padding: 5px 13px;
+  font-size: 0.97em;
+  box-shadow: 0 2px 5px rgba(34, 93, 176, 0.06);
+  margin-right: 6px;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: 0.01em;
+  user-select: none;
+}
+
+.activity-type.cocurricular {
+  background: linear-gradient(120deg, #d7fceb, #b7f7da);
+  color: #20936b;
+}
+
+.activity-date {
+  color: #7887ad;
+  font-weight: 500;
+  font-size: 0.98em;
+}
+
+.activity-description {
+  color: #3c4257;
+  background: #eaf3fb;
+  border-radius: 8px;
+  padding: 8px 13px;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+/* Actions */
+.activity-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 13px;
+  margin-left: 10px;
+  margin-top: 7px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.18em;
+  padding: 7px;
+  margin: 0;
+  color: #afbbdd;
+  cursor: pointer;
+  transition: background 0.13s, color 0.13s, transform 0.13s;
+}
+
+.action-btn.edit-btn:hover {
+  color: #3182ce;
+  background: #e5ecfa;
+  transform: scale(1.1) translateY(-1px);
+}
+
+.action-btn.delete-btn:hover {
+  color: #ee3a3a;
+  background: #fdeaea;
+  transform: scale(1.1) translateY(-1px);
+}
+
+/* Fade/slide in animation */
+@keyframes fadeSlideUp {
+  from {
+    transform: translateY(22px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .my-activities-card {
+    padding: 10px 2vw;
+  }
+  .activity-item {
+    flex-direction: column;
+    gap: 7px;
+    padding: 12px 8px;
+  }
+  .activity-actions {
+    margin-top: 9px;
+    margin-left: 0;
+  }
+}
