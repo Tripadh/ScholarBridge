@@ -2,17 +2,22 @@
 .achievements-container {
   padding: 40px 20px;
   max-width: 800px;
-  margin: 40px auto;
+  margin: auto;
+  padding-top: 200px;
   background-color: #ffffff;
   border-radius: 16px;
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: all 0.3s ease;
 }
+body, html {
+  scroll-padding-top: 120px; /* ensures browser scroll leaves room */
+}
 
 /* Headings */
 .achievements-container h2,
 .achievements-container h3 {
+  margin-top: 80px;
   color: #1c2b4a;
   font-weight: 700;
   margin-bottom: 20px;
@@ -80,7 +85,7 @@
 
 /* Uploaded Achievements Title */
 .uploaded-title {
-  margin-top: 50px;
+  margin-top: 80px; /* increased from 50px or current value */
   font-size: 1.6rem;
   color: #1c2b4a;
   border-bottom: 2px solid #3f72af;
@@ -88,6 +93,7 @@
   font-weight: 700;
   text-align: center;
 }
+
 
 /* Achievements List */
 .achievements-list {
@@ -173,3 +179,44 @@
   box-shadow: 0 1px 4px rgba(211, 54, 54, 0.5);
   transform: translateY(1px);
 } 
+/* Custom file input wrapper */
+.file-upload-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.file-upload-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: #f2f5fb;
+  color: #3f72af;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1.5px solid #ccd6e0;
+  box-shadow: 0 2px 8px rgba(63, 114, 175, 0.08);
+  transition: background 0.24s, border-color 0.2s;
+}
+
+.file-upload-label:hover {
+  background: #e7effa;
+  border-color: #3f72af;
+}
+
+.file-upload-input {
+  display: none; /* Hide actual file input */
+}
+
+.file-upload-filename {
+  font-size: 0.98em;
+  color: #657194;
+  padding-left: 12px;
+  font-style: italic;
+}
+.file-upload-filename.empty {
+  color: #bbb;
+  font-style: normal;
+}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { collection, addDoc, getDocs, query, orderBy, where } from 'firebase/firestore';
-import { db, storage } from '../firebase'; // update with your firebase config import
+import { collection, addDoc, getDocs, query, orderBy } from 'firebase/firestore';
+import { db, storage } from '../firebase';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 
 const Achievements = () => {
@@ -13,14 +13,13 @@ const Achievements = () => {
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Load achievements from Firestore
   useEffect(() => {
     const fetchAchievements = async () => {
       try {
         const q = query(collection(db, 'achievements'), orderBy('date', 'desc'));
         const querySnapshot = await getDocs(q);
         const achvs = [];
-        querySnapshot.forEach((doc) => {
+        querySnapshot.forEach(doc => {
           achvs.push({ id: doc.id, ...doc.data() });
         });
         setAchievements(achvs);
@@ -32,14 +31,12 @@ const Achievements = () => {
     fetchAchievements();
   }, []);
 
-  // Upload achievement to Firebase
   const handleUpload = async (e) => {
     e.preventDefault();
     if (!title || !studentName || !date || !file) return alert('Please fill all fields');
 
     setLoading(true);
     try {
-      // Upload file to storage
       const storageRef = ref(storage, `achievements/${file.name}-${Date.now()}`);
       const uploadTask = uploadBytesResumable(storageRef, file);
 
@@ -52,8 +49,6 @@ const Achievements = () => {
         },
         async () => {
           const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
-
-          // Save achievement metadata to Firestore
           await addDoc(collection(db, 'achievements'), {
             title,
             studentName,
@@ -63,13 +58,11 @@ const Achievements = () => {
             fileName: file.name,
             createdAt: new Date(),
           });
-
           setTitle('');
           setStudentName('');
           setDescription('');
           setDate('');
           setFile(null);
-
           // Refresh list
           const q = query(collection(db, 'achievements'), orderBy('date', 'desc'));
           const querySnapshot = await getDocs(q);
@@ -87,16 +80,24 @@ const Achievements = () => {
     }
   };
 
-  // Filter achievements by search term
-  const filteredAchievements = achievements.filter(
-    (achv) =>
-      achv.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      achv.studentName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      achv.description.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredAchievements = achievements.filter((achv) =>
+    achv.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    achv.studentName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    achv.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
-    <div className="achievements-container" style={{ padding: '20px', maxWidth: '800px', margin: 'auto', backgroundColor: '#fff', borderRadius: '16px', boxShadow: '0 6px 25px rgba(0,0,0,0.08)' }}>
+    <div
+      className="achievements-container"
+      style={{
+        padding: '20px',
+        maxWidth: '800px',
+        margin: 'auto',
+        backgroundColor: '#fff',
+        borderRadius: '16px',
+        boxShadow: '0 6px 25px rgba(0,0,0,0.08)',
+      }}
+    >
       <h3 style={{ color: '#1c2b4a', fontWeight: '700', marginBottom: '20px' }}>Upload Achievement</h3>
       <form onSubmit={handleUpload} style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px' }}>
         <input
@@ -133,19 +134,41 @@ const Achievements = () => {
           style={{ padding: '12px', borderRadius: '10px', border: '1.5px solid #ccd6e0' }}
           required
         />
-        <input
-          type="file"
-          onChange={(e) => setFile(e.target.files[0])}
-          className="achievement-file-input"
-          style={{ padding: '6px', borderRadius: '10px', border: '1.5px solid #ccd6e0' }}
-          accept=".pdf,.jpg,.jpeg,.png"
-          required
-        />
+        <div className="file-upload-wrapper" style={{ marginBottom: '24px' }}>
+          <label htmlFor="file-upload" className="file-upload-label" style={{
+            display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '12px 18px', borderRadius: '10px',
+            background: '#f2f5fb', color: '#3f72af', fontWeight: '600', cursor: 'pointer', border: '1.5px solid #ccd6e0',
+            boxShadow: '0 2px 8px rgba(63, 114, 175, 0.08)', transition: 'background 0.24s, border-color 0.2s',
+          }}>
+            Choose Achievement File
+            <input
+              type="file"
+              id="file-upload"
+              className="file-upload-input"
+              onChange={e => setFile(e.target.files[0])}
+              accept=".pdf,.jpg,.jpeg,.png"
+              required
+              style={{display: 'none'}}
+            />
+            {file && (
+              <span className="file-upload-filename" style={{fontSize: '0.98em', color: '#657194', paddingLeft: '12px', fontStyle: 'italic'}}>
+                {file.name}
+              </span>
+            )}
+          </label>
+        </div>
         <button
           type="submit"
           disabled={loading}
           className="achievement-upload-btn"
-          style={{ padding: '12px 26px', borderRadius: '8px', backgroundColor: '#3f72af', color: 'white', fontWeight: '600', cursor: loading ? 'not-allowed' : 'pointer' }}
+          style={{
+            padding: '12px 26px',
+            borderRadius: '8px',
+            backgroundColor: '#3f72af',
+            color: 'white',
+            fontWeight: '600',
+            cursor: loading ? 'not-allowed' : 'pointer'
+          }}
         >
           {loading ? 'Uploading...' : 'Upload Achievement'}
         </button>

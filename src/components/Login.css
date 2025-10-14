@@ -1,113 +1,116 @@
-/* Container with relative positioning for absolute title positioning */
+/* Container: Center content with smooth gradient background */
 .login-container {
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(120deg, #f3f6fb 70%, #e3eefd 100%);
+  background: linear-gradient(120deg, #e3e8f9 65%, #f9fbff 100%);
 }
 
-/* App title centered above the card */
+/* App title above card, centered and distinct */
 .app-title {
   position: absolute;
-  top: 50px;
+  top: 45px;
   left: 0;
   width: 100%;
   text-align: center;
-  font-size: 2.3em;
+  font-size: 2.5em;
   font-weight: 800;
-  color: #2563eb;
-  letter-spacing: 1px;
+  color: #1e293b;
+  letter-spacing: 1.2px;
   z-index: 2;
   pointer-events: none;
   user-select: none;
 }
 
-/* Login/register card styling */
+/* Card container with subtle shadow and rounded corners */
 .login-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 36px rgba(0, 0, 0, 0.11);
-  padding: 54px 58px 52px 58px;
-  width: 420px;
-  max-width: 95vw;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(43, 52, 69, 0.15);
+  padding: 60px 64px;
+  width: 460px;
+  max-width: 96vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 }
 
-/* Heading style for login title */
+/* Card header styling for login title */
 .login-card h2 {
-  font-size: 2.2em;
-  font-weight: 700;
-  margin-bottom: 28px;
-  letter-spacing: 1.2px;
-  color: #3160aa;
+  font-size: 2.4em;
+  font-weight: 800;
+  margin-bottom: 36px;
+  letter-spacing: 1.4px;
+  color: #355bc4;
   text-align: center;
 }
 
-/* Form inside the card */
+/* Form with full width */
 .login-card form {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-/* Labels for inputs and selects */
+/* Labels with elegant spacing */
 .login-card label {
-  font-size: 1em;
+  font-size: 1.05em;
   font-weight: 600;
-  margin-bottom: 8px;
-  color: #475569;
+  margin-bottom: 10px;
+  color: #0f141b;
   margin-left: 4px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   user-select: none;
 }
 
-/* Inputs and select dropdown styling */
+/* Inputs and selects: unified style with larger size and subtle shadows */
 .login-card input,
 .login-card select {
-  padding: 14px 12px;
-  border-radius: 10px;
-  border: 1.5px solid #cbd5e1;
-  margin-bottom: 18px;
-  font-size: 1.05em;
-  background: #fefefe;
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: none;
+  margin-bottom: 26px;
+  font-size: 1.2em;
+  background: #e9efff;
   outline: none;
-  box-shadow: 0 2px 6px #dce3f044;
-  transition: border-color 0.22s, box-shadow 0.18s, background 0.16s;
+  box-shadow: 0 6px 16px rgba(57, 93, 218, 0.3);
+  width: 100%;
+  box-sizing: border-box;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Focus states */
+/* Focus styling with soft blue background and stronger shadow */
 .login-card input:focus,
 .login-card select:focus {
-  border-color: #4f7ae8;
-  box-shadow: 0 8px 20px #4f7ae859;
-  background: #fbfbff;
+  background: #d1dbff;
+  box-shadow: 0 8px 28px rgba(57, 93, 218, 0.5);
 }
 
-/* Submit button styling */
+/* Primary submit button styling */
 .login-card button[type="submit"] {
-  background: linear-gradient(90deg, #4f7ae8, #3756cc);
-  color: #f9f9f9;
-  font-size: 1.15em;
-  padding: 14px 0;
-  border-radius: 12px;
+  width: 100%;
+  background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+  color: #fff;
+  font-size: 1.22em;
+  padding: 16px 0;
+  margin-top: 8px;
+  border-radius: 13px;
   border: none;
-  font-weight: 700;
+  font-weight: 800;
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);
   cursor: pointer;
   letter-spacing: 0.09em;
-  box-shadow: 0 12px 32px #4f7ae851;
-  transition: background 0.18s, transform 0.18s;
-  user-select: none;
+  transition: background 0.23s, transform 0.20s, box-shadow 0.22s;
 }
 
 /* Submit button hover effect */
 .login-card button[type="submit"]:hover {
-  background: linear-gradient(90deg, #3756cc, #4f7ae8);
-  transform: translateY(-2px) scale(1.03);
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+  box-shadow: 0 14px 44px rgba(37, 99, 235, 0.25);
+  transform: translateY(-2px) scale(1.05);
 }
 
 /* Error message styling */
@@ -115,55 +118,61 @@
   background: #fee2e2;
   color: #b91c1c;
   font-weight: 700;
-  padding: 12px 10px;
-  border-radius: 10px;
-  margin: 18px 0 24px 0;
+  padding: 14px 12px;
+  border-radius: 12px;
+  margin: 22px 0 28px;
   text-align: center;
-  letter-spacing: 0.06em;
-  border: 1.5px solid #ffb6ba;
+  letter-spacing: 0.07em;
+  border: 1.5px solid #fca5a5;
 }
 
-/* Paragraph and small button text styling */
+/* Paragraph text near bottom */
 .login-card p {
-  font-size: 1em;
-  margin-top: 22px;
-  color: #64748b;
+  font-size: 1.05em;
+  margin-top: 26px;
+  color: #6b7280;
   text-align: center;
 }
 
-/* Button style for clickable links like Register/Login toggle */
-.login-card button {
+/* Buttons styled as links */
+.login-card button:not([type="submit"]) {
   background: none;
-  color: #4f7ae8;
+  color: #3b82f6;
   font-weight: 700;
   border: none;
   cursor: pointer;
-  padding: 0 5px;
-  letter-spacing: 0.10em;
-  transition: opacity 0.16s;
-  opacity: 0.89;
+  padding: 0 6px;
+  letter-spacing: 0.12em;
+  transition: opacity 0.2s ease;
+  opacity: 0.9;
 }
 
 /* Hover effect for link buttons */
-.login-card button:hover {
+.login-card button:not([type="submit"]):hover {
   opacity: 1;
   text-decoration: underline;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive adjustments for small screens */
 @media (max-width: 520px) {
   .login-card {
     width: 98vw;
-    padding: 32px 12px;
+    padding: 36px 18px;
   }
-  
+
   .app-title {
-    top: 38px;
-    font-size: 1.8em;
+    top: 36px;
+    font-size: 2em;
   }
-  
+
   .login-card h2 {
-    font-size: 1.4em;
-    margin-bottom: 16px;
+    font-size: 1.6em;
+    margin-bottom: 24px;
+  }
+
+  .login-card input,
+  .login-card select {
+    padding: 16px 14px;
+    font-size: 1em;
   }
 }
