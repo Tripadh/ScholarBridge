@@ -27,11 +27,3 @@ Designed to streamline **student collaboration, project tracking, and real-time 
 
 ---
 
-## 🚀 Quick Start (Hackathon Mode)
-
-Follow these steps to run the platform locally:
-
-### 1️⃣ Install Dependencies
-Ensure Node.js is installed, then run:
-```bash
-npm install
